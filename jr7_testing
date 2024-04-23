@@ -1,0 +1,32 @@
+import unittest
+
+def etudiants_note(dictionnaire_notes):
+    etudiants_selectionnes = {}
+    for nom, note in dictionnaire_notes.items():
+        if note >= 15:
+            etudiants_selectionnes[nom] = note
+    return etudiants_selectionnes
+
+
+dictionnaire_notes = {
+    "Alice": 18,
+    "Bob": 12,
+    "Charlie": 16,
+    "David": 14,
+    "Eva": 19
+}
+
+result_attendu = {'Alice': 18, 'Charlie': 16, 'Eva': 190}
+
+etudiants_selectionnes = etudiants_note(dictionnaire_notes)
+
+# Affichage du nouveau dictionnaire avec les étudiants sélectionnés
+print("Étudiants avec une note moyenne supérieure ou égale à 15 :")
+print(etudiants_selectionnes)
+
+class TestSimple(unittest.TestCase):
+    def test_simple(self):
+        self.assertEqual(etudiants_note(dictionnaire_notes), result_attendu, "ça va pas :)")
+
+if __name__ == '__main__':
+    unittest.main()

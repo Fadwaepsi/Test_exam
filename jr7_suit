@@ -16,7 +16,7 @@ dictionnaire_notes = {
     "Eva": 19
 }
 
-result_attendu = {'Alice': 18, 'Charlie': 16, 'Eva': 19}
+result_attendu = {'Alice': 18, 'Charlie': 16, 'Eva': 1999999}
 
 test_dict_notes = {
     "Alice": -18,
@@ -27,13 +27,7 @@ test_dict_notes = {
 }
 
 test_result_attendu = {'Eva': 19}
-
-
 #etudiants_selectionnes = etudiants_note(dictionnaire_notes)
-
-# Affichage du nouveau dictionnaire avec les étudiants sélectionnés
-#print("Étudiants avec une note moyenne supérieure ou égale à 15 :")
-#print(etudiants_selectionnes)
 
 class TestSimple(unittest.TestCase):
     def test_simple(self):
